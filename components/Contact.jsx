@@ -6,7 +6,7 @@ import { useFormState } from "react-dom";
 import { handleFormSubmit } from "@/app/Actions/formAction";
 import { ToastContainer, toast } from "react-toastify";
 
-// import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
 
@@ -15,6 +15,9 @@ function Contact() {
   const [state, formAction] = useFormState(handleFormSubmit, {
     message: null,
   });
+  useEffect(()=>{
+    toast.success("Hello this is email from our side see this ")
+  })
 
   useEffect(() => {
     

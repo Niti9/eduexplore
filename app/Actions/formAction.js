@@ -20,14 +20,17 @@ export async function handleFormSubmit(prev, formdata) {
       resend.emails.send({
         from: process.env.fromEmail,
         to: process.env.SendtoEmail,
-        subject: "Course Related Query",
-        html: `<h1>New Course Query</h1>
-      <p>Hello SMCAS Admin ,</p>
-      <p>You have received a new query regarding the courses. Here are the details:</p>
+        subject: "MY TALENT ",
+        html: `<h1>Request for Demo Session</h1>
+      <p>Hello MY TALENT Admin ,</p>
+      <p>You have received a new query regarding the Demo Session. Here are the details:</p>
           
           <div class="question">
           <p class="user-info">User Name: ${formdata.get("name")}</p>
-          <p class="user-info">User Email: ${formdata.get("email")}</p>
+          <p class="user-info">User Designation: ${formdata.get("designation")}</p>
+          <p class="user-info">User Phone Number: ${formdata.get("phone")}</p>
+          <p class="user-info">User School Name: ${formdata.get("schoolName")}</p>
+          <p class="user-info">User Email Id: ${formdata.get("email")}</p>
           <p><strong>Query:  ${formdata.get("description")}</strong></p>
          ${prev}
     
