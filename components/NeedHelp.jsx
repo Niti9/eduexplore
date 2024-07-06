@@ -6,11 +6,18 @@ function NeedHelp() {
     {/* for laptop screen */}
       {/* <section className="grid grid-cols-[1fr_1.5fr] bg-[#fef0ce] rounded-3xl w-[80%] m-auto mb-[70px]">
         <div className="flex justify-center">
+         
+          <div className=" lg:scale-110 xl:scale-125  lg:-translate-y-3 xl:-translate-y-4 overflow-clip overflow-content">
+
           <img
-            classsName="overflow-clip    scale-[1.2] -translate-y-4"
+            classsName=" "
             src="/needHelp.svg"
             alt="needHelp"
+            
           />
+          </div>
+
+
         </div>
         <div className="flex flex-col justify-center">
           <h1 className="font-semibold text-5xl leading-6 mb-8 ">Need help?</h1>
@@ -51,11 +58,13 @@ function NeedHelp() {
        rounded-3xl w-[80%] m-auto mb-[70px]
        ">
         <div className="flex justify-center">
+          <div className="lg:scale-110 xl:scale-125  lg:-translate-y-3 xl:-translate-y-4 overflow-clip overflow-content">
           <img
-            classsName="overflow-clip    scale-[1.2] -translate-y-4"
+            classsName=""
             src="/needHelp.svg"
             alt="needHelp"
           />
+          </div>
         </div>
         <div className="flex flex-col justify-center  px-4 md:px-0 py-4 sm:py-0">
           <h1 className="font-semibold text-2xl md:text-3xl  md:pt-2 lg:pt-0
@@ -77,7 +86,7 @@ function NeedHelp() {
                 Write to us at{" "}
               </p>
               <h3 className="text-[#4315c0] font-semibold leading-8 text-lg lg:text-[22px] xl:text-[28px] ">
-                Contact@eduexplore.in
+                contact@eduexplore.in
               </h3>
             </div>
           </div>

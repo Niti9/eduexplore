@@ -4,11 +4,13 @@ function Footer() {
   return (
     <>
       <div className="w-[80%] m-auto  grid  md:grid-cols-[1fr_1fr_1fr] py-[70px] px-0 pb-8 md:pb-0">
-        <div className="flex flex-col items-start justify-center ">
+        <div className="flex flex-col items-start  ">
           {/* <img src="/mainLogo.png" alt="main-logo" /> */}
-          <div className="powerSmurf text-[#5259AA] text-3xl  cursor-pointer">
+          <Link href="#">
+          <div className="powerSmurf text-[#5a39d6] text-3xl  cursor-pointer  ">
             My Talent
           </div>
+          </Link>
           <div className=" mt-8 ml-2 flex gap-4">
             <Link href="">
             <img
