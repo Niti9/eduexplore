@@ -78,13 +78,16 @@ export async function handleFormSubmit(prev, formdata) {
       const smtp = await Promise.resolve(transporter);
       let mailConfig = {
         from: process.env.fromEmail,
-        html: `<h1 style={{ color: "#61dafb" }}>New Course Query</h1>
-        <p>Hello SMCAS Admin ,</p>
-        <p>You have received a new query regarding the courses. Here are the details:</p>
+        html: `<h1 style={{ color: "#61dafb" }}>Request for Demo Session</h1>
+        <p>Hello MY TALENT Admin ,</p>
+        <p>You have received a new request regarding the Demo Session. Here are the details:</p>
             
             <div class="question">
             <p class="user-info">User Name: ${data.name}</p>
             <p class="user-info">User Email: ${data.email}</p>
+             <p class="user-info">User Designation: ${data.designation}</p>
+          <p class="user-info">User Phone Number: ${data.phone}</p>
+          <p class="user-info">User School Name: ${data.schoolName}</p>
             <p><strong>Query:  ${data.description}</strong></p
           <p>Best regards,<br> The Course Support Team</p> 
         
