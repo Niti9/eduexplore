@@ -15,9 +15,6 @@ function Contact() {
   const [state, formAction] = useFormState(handleFormSubmit, {
     message: null,
   });
-  useEffect(()=>{
-    toast.success("Hello this is email from our side see this ")
-  })
 
   useEffect(() => {
     

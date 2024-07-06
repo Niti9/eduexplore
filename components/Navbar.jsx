@@ -6,11 +6,11 @@ function Navbar() {
   return (
     <>
     <header className="sticky top-0 z-10 bg-white block shadow-lg">
-        <div className="mx-auto flex items-center px-[2px] py-2 md:p-4  w-4/5">
+        <div className=" mx-auto flex space-x-2  items-center md:px-[2px] py-2 md:p-4  w-4/5">
           <div className="">
 
           {/* <img  className="w-48 h-full " src="/mainLogo.png" alt="main-logo"  /> */}
-          <div className='powerSmurf text-[#5259AA] text-[32px] sm:text-4xl  cursor-pointer font-bold'>My Talent</div>
+          <div className='powerSmurf text-[#5259AA] text-[26px] sm:text-4xl  cursor-pointer font-bold'>My Talent</div>
 
           </div>
 
