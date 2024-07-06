@@ -1,11 +1,35 @@
 
-
-import React from 'react'
+"use client"
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+// import "../app/globals.css";
 function Navbar() {
+
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [navbarBg, setNavbarBg] = useState('bg-transparent');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollPosition > 0) {
+      setNavbarBg('bg-white');
+    } else {
+      setNavbarBg('bg-transparent');
+    }
+  }, [scrollPosition]);
+
   return (
     <>
-    <header className="sticky top-0 z-10 bg-white block shadow-lg">
+    {/* <header className="sticky top-0 z-10 bg-white block shadow-lg"> */}
+    <header className={`sticky top-0 z-10 block shadow-lg  ${navbarBg}`}>
         <div className=" mx-auto flex space-x-2  items-center md:px-[2px] py-2 md:p-4  w-4/5">
           <div className="">
 

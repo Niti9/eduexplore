@@ -55,18 +55,21 @@ function NeedHelp() {
 
       {/* for mobile  */}
        <section className="grid md:grid-cols-[1fr_1.5fr] bg-[#fef0ce] 
-       rounded-3xl w-[80%] m-auto mb-[70px]
+       rounded-3xl  mx-4  sm:w-[80%] sm:m-auto  mb-[70px]
        ">
         <div className="flex justify-center">
-          <div className="lg:scale-110 xl:scale-125  lg:-translate-y-3 xl:-translate-y-4 overflow-clip overflow-content">
+          <div className="md:-translate-y-8 xl:scale-125  lg:-translate-y-10
+       
+            xl:-translate-y-4 overflow-clip overflow-contentf ">
           <img
-            classsName=""
+          //  class="lg:w-3/5 w-full xl:w-full bg-green-400"
+           class=""
             src="/needHelp.svg"
             alt="needHelp"
           />
           </div>
         </div>
-        <div className="flex flex-col justify-center  px-4 md:px-0 py-4 sm:py-0">
+        <div className="flex flex-col justify-center  px-4 md:px-0 py-4 sm:py-0 ">
           <h1 className="font-semibold text-2xl md:text-3xl  md:pt-2 lg:pt-0
            lg:text-4xl pb-1 xl:text-5xl leading-6 xl:mb-8 px-1">Need help?</h1>
           <div className="grid  sm:grid-cols-[2fr_0fr_2fr_1fr] px-2  py-4 md:py-0">

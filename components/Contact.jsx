@@ -87,7 +87,7 @@ function Contact() {
 
 
         {/* for mobile */}
-        <div id="demo" className='min-h-[300px]  p-8 md:p-14'>
+        <div id="demo" className='h-[700px] sm:min-h-[300px]  p-8 md:p-14 '>
     <form ref={formRef} action={formAction}>
       
           <h2 className='text-xl leading-8 md:text-[1.5em] text-md font-bold '> Book a demo session </h2>
