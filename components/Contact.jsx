@@ -5,7 +5,8 @@ import Image from "next/image";
 import { useFormState } from "react-dom";
 import { handleFormSubmit } from "@/app/Actions/formAction";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
+// import "react-toastify/dist/ReactToastify.css";
 
 function Contact() {
 
@@ -35,7 +36,7 @@ function Contact() {
   return (
    <>
    <ToastContainer position="top-center" />
-    <div className='min-h-[300px] p-14  '>
+    {/* <div className='min-h-[300px] p-14  '>
     <form ref={formRef} action={formAction}>
       
           <h2 className='text-[1.5em] text-md font-bold '> Book a demo session </h2>
@@ -70,6 +71,58 @@ function Contact() {
           name="email"
           required/>
           <textarea  className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          placeholder='Description'
+          type="text"
+          id="description"
+          name="description"
+          rows={3}
+          required
+          />
+          <button className='border-none
+    bg-[#5a39d6] py-3 px-5 rounded-xl  text-lg text-white
+   '> Request Demo </button>
+       </form>
+
+        </div> */}
+
+
+        {/* for mobile */}
+        <div id="demo" className='min-h-[300px]  p-8 md:p-14'>
+    <form ref={formRef} action={formAction}>
+      
+          <h2 className='text-xl leading-8 md:text-[1.5em] text-md font-bold '> Book a demo session </h2>
+          <input className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          type='text'
+          placeholder='Your Name'
+          id="name"
+          name="name"
+          required/>
+          <input className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          type='text'
+          placeholder='Your Designation'
+          id="designation"
+          name="designation"
+          required/>
+          <input className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          type='text'
+          id='phone'
+          name='phone'
+          placeholder='Phone Number'
+          required/>
+          <input className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          type='text'
+          id="schoolName"
+          name="schoolName"
+          placeholder='School name'
+          required/>
+          <input className='p-4  border border-solid border-[#d0d5dd] w-[92%] my-2 rounded-lg '
+          type='email'
+          placeholder='School E-mail ID'
+          id="email"
+          name="email"
+          required/>
+          <textarea  className='p-4  border border-solid border-[#d0d5dd]
+           w-[92%] my-2 rounded-lg '
           placeholder='Description'
           type="text"
           id="description"

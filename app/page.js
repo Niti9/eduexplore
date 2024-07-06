@@ -8,11 +8,14 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <section className="grid grid-cols-2 -mt-28 text-black bg-white ">
+      {/*for laptop  */}
+      <section className="grid  grid-cols-1 md:grid-cols-2 -mt-28 text-black bg-white ">
         <DemoText />
 
         <DemoFormSide />
       </section>
+
+     
       <NeedHelp/>
       <Footer/>
 
