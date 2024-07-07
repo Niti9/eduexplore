@@ -18,7 +18,7 @@ export const metadata = {
     'twitter:image':'https://i.ibb.co/PD7YPG2/Group-1000008179.png',
     'twitter:card':'summary_large_image',
     'og:type':'website',
-    'og:site_name':'www.eduexplore.in'
+    
 
   }
 
