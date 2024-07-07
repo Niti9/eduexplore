@@ -12,11 +12,13 @@ export const metadata = {
   other:{
     // 'theme-color':'#0d1117',
     'theme-color':'#f5f6f9',
+    'og:url':'https://www.eduexplore.in',
     'og:url':'https://eduexplore.in',
     'og:image':'https://i.ibb.co/PD7YPG2/Group-1000008179.png',
     'twitter:image':'https://i.ibb.co/PD7YPG2/Group-1000008179.png',
     'twitter:card':'summary_large_image',
     'og:type':'website',
+    'og:site_name':'www.eduexplore.in'
 
   }
 
