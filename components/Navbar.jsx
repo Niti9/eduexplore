@@ -29,7 +29,7 @@ function Navbar() {
   return (
     <>
     {/* <header className="sticky top-0 z-10 bg-white block shadow-lg"> */}
-    <header className={`sticky top-0 z-10 block shadow-lg  ${navbarBg}`}>
+    <header className={`sticky top-0 z-10 block   ${navbarBg}`}>
         <div className=" mx-auto flex space-x-2  items-center md:px-[2px] py-2 md:p-4  w-4/5">
           <div className="">
 
