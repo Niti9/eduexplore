@@ -20,7 +20,7 @@ function Navbar() {
 
   useEffect(() => {
     if (scrollPosition > 0) {
-      setNavbarBg('bg-white');
+      setNavbarBg('bg-normal');
     } else {
       setNavbarBg('bg-transparent');
     }

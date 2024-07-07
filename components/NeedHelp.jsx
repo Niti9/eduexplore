@@ -55,7 +55,7 @@ function NeedHelp() {
 
       {/* for mobile  */}
        <section className="grid md:grid-cols-[1fr_1.5fr] bg-[#fef0ce] 
-       rounded-3xl  mx-4  sm:w-[80%] sm:m-auto  mb-[70px]
+       rounded-3xl  mx-4  sm:w-[80%] sm:m-auto  mb-[70px] 
        ">
         <div className="flex justify-center">
           <div className="md:-translate-y-8 xl:scale-125  lg:-translate-y-10
