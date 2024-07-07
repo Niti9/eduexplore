@@ -1,6 +1,6 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Head from 'next/head';
+
 
 const outfit = Outfit({ subsets: ["latin"], 
   weight:['100','200','300','400','500','600','700','800'],
@@ -28,9 +28,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-    <Head>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+   
       <body className={outfit.variable}>{children}</body>
     </html>
   );
