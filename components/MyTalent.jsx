@@ -22,8 +22,8 @@ import Navbar from "@/components/Navbar";
 function MyTalent() {
     const [selectedTab, setSelectedTab] = useState(null);
     const tabs = ["Competitions", "Feedback", "Activities", "reportCard"]; // Array of tab names
-    const [shown, setShown] = useState(null);
-    const id = ["1", "4"];
+  
+    
     useEffect(() => {
       const interval = setInterval(() => {
         // Find the index of the currently selected tab
