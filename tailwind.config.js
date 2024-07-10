@@ -13,11 +13,8 @@ module.exports = {
       center:true,
       padding:"15px",
     },
-    // screens:{
-    //   sm:'640px',
-    //   md:'768px',
-    //   lg:'960px',
-    //   xl:'1200px'
+    // screens: {
+    //   '425': '425px',
     // },
     fontFamily:{
       primary:'var(--font-outfit)',

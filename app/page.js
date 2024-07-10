@@ -6,38 +6,52 @@ import NeedHelp from "@/components/NeedHelp";
 import Footer from "@/components/Footer";
 import Main from '@/components/Main';
 import CheckingCorousel from "@/components/CheckingCorousel";
-export default function Home() {
-  return (
-    <>
-      <Navbar />
-   
-   {/*REQUEST DEMO PAGE   */}
-      {/* <section className="grid  grid-cols-1 md:grid-cols-2 -mt-28 text-black bg-white ">
-        <DemoText />
 
-        <DemoFormSide />
-      </section>
+
+
+import { redirect } from 'next';
+
+
+export default function Home() {
+
+  
+  return (
+  //   <>
+  //     <Navbar />
+   
+  //  {/*REQUEST DEMO PAGE   */}
+  //     {/* <section className="grid  grid-cols-1 md:grid-cols-2 -mt-28 text-black bg-white ">
+  //       <DemoText />
+
+  //       <DemoFormSide />
+  //     </section>
 
      
-      <NeedHelp/> */}
+  //     <NeedHelp/> */}
 
-      {/* main page */}
-      {/* <Main/> */}
-
-
-      {/* check */}
-      <CheckingCorousel/>
-      <Footer/>
+  //     {/* main page */}
+  //     {/* <Main/> */}
 
 
-      {/* <Image
-          priority
-          className=""
-          alt="about-background"
-          src={Bg}
-          layout="fill"
-          objectFit="cover"
-        /> */}
-    </>
+  //     {/* check */}
+  //     <CheckingCorousel/>
+  //     <Footer/>
+
+
+  //     {/* <Image
+  //         priority
+  //         className=""
+  //         alt="about-background"
+  //         src={Bg}
+  //         layout="fill"
+  //         objectFit="cover"
+  //       /> */}
+  //   </>
+  
+
+
+  <>
+ 
+  </>
   );
 }

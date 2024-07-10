@@ -1,6 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from 'next/link';
+import Image from "next/image";
+import bg1 from '../public/bg1.svg'
+import bg2 from '../public/bg2.svg'
+import bg3 from '../public/bg3.svg'
 
 function CheckingCorousel() {
   const [selectedTab, setSelectedTab] = useState(null);
@@ -226,30 +230,57 @@ function CheckingCorousel() {
             </div>
           </div>
 
-          <div className="">
+
+
+
+{/* below image */}
+          <div className={` max-w-[1128px]  
+            ${selectedTab === 'reportCard' ?"bg-[#e3ebfe]":" bg-white "}`}>
             <div
               className={` ${selectedTab === "Competitions" ? "flex" : "hidden"}`}
             >
-              <img src="/bg1.svg" alt="image" />
+              <Image
+               src={bg1} 
+              className="w-full h-full"
+              alt="image1" 
+              priority
+              width={500}
+              height={500}
+
+              />
             </div>
 
             <div
               className={` ${selectedTab === "Feedback" ? "flex" : "hidden"}`}
             >
-              <img src="/bg2.svg" alt="image" />
+              <Image src={bg2}
+               className="w-full h-full"
+              alt="image2" priority
+              width={96}
+              height={96}/>
             </div>
 
             <div
               className={` ${selectedTab === "Activities" ? "flex" : "hidden"}`}
             >
-              <img src="/bg3.svg" alt="image" />
+              <Image
+               className="w-full h-full"
+               src={bg3}
+               alt="image3" priority
+              width={96}
+              height={96}/>
             </div>
 
             <div
               className={` ${selectedTab === "reportCard" ? "flex" : "hidden"}
         `}
             >
-              <img className=" " src="/bg1.svg" alt="image" />
+              <Image 
+               className="w-full h-full" 
+              src={bg1} alt="image4"
+               priority
+              width={96}
+              height={96}/>
             </div>
           </div>
         </div>
