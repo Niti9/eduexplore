@@ -64,7 +64,7 @@ function MainTitle() {
             </div>
           </div>
           <div>
-  <img  className=" mt-8 sm:mt-0 w-full h-full bg-red-300
+  <img  className=" mt-8 sm:mt-0 w-full h-full 
   "
    src="/childXl.png" alt="child image"/>
   </div>

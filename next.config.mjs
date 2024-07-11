@@ -4,11 +4,23 @@ const nextConfig = {
         return [
           {
             source: '/',
-            destination: '/my-Talent',
+            destination: '/mytalent',
             permanent: true,
+            
+          
           },
         ];
       },
+
+
+    // async rewrites() {
+    //   return [
+    //     {
+    //       source: '/',
+    //       destination: '/mytalent',
+    //     },
+    //   ];
+    // },
 };
 
 export default nextConfig;
