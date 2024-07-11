@@ -177,7 +177,7 @@ function MyTalent() {
        rounded-t-lg relative cursor-pointer text-lg right-[1px]
          ${
            selectedTab === "digitalPresence"
-             ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium !ml-[-175px]"
+             ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium !ml-[-180px]"
              : "text-[#475467]"
          }
        `}
