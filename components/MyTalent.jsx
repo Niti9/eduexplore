@@ -4,11 +4,11 @@ import Image from "next/image";
 import newBg1 from '../public/newBg1.svg'
 import newBg2 from '../public/newBg2.svg'
 import newBg3 from '../public/newBg3.svg'
-import newBg4 from '../public/newbg4.svg'
+import newBg4 from '../public/newBg4.svg'
 import smBg1 from '../public/smBg1.svg'
 import smBg2 from '../public/smBg2.svg'
 import smBg3 from '../public/smBg3.svg'
-import smBg4 from '../public/smbg4.svg'
+import smBg4 from '../public/smBg4.svg'
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -433,7 +433,7 @@ function MyTalent() {
             >
               <Image 
                className="w-full h-full" 
-              src={newBg1} alt="image4"
+              src={newBg4} alt="image4"
                priority
               width={96}
               height={96}/>
