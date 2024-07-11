@@ -1,59 +1,60 @@
-"use client";
-import React,{useState,useEffect} from "react";
-import Link from "next/link";
-import newBg1 from '../public/newBg1.svg'
-import newBg2 from '../public/newBg2.svg'
-import newBg3 from '../public/newBg3.svg'
-import newBg4 from '../public/newbg4.svg'
-import smBg1 from '../public/smBg1.svg'
-import smBg2 from '../public/smBg2.svg'
-import smBg3 from '../public/smBg3.svg'
-import smBg4 from '../public/smbg4.svg'
+// "use client";
+// import React,{useState,useEffect} from "react";
+import React from "react";
+// import Link from "next/link";
+// import newBg1 from '../public/newBg1.svg'
+// import newBg2 from '../public/newBg2.svg'
+// import newBg3 from '../public/newBg3.svg'
+// import newBg4 from '../public/newbg4.svg'
+// import smBg1 from '../public/smBg1.svg'
+// import smBg2 from '../public/smBg2.svg'
+// import smBg3 from '../public/smBg3.svg'
+// import smBg4 from '../public/smbg4.svg'
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import Image from "next/image";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+// import { Autoplay, Pagination, Navigation } from "swiper/modules";
+// import Image from "next/image";
 
 function Main() {
 
-  const [selectedTab, setSelectedTab] = useState('Competitions');
-  const tabs = ['Competitions', 'Feedback', 'Activities', 'digitalPresence']; // Array of tab names
-  const id = ['1','2','3','4']
+  // const [selectedTab, setSelectedTab] = useState('Competitions');
+  // const tabs = ['Competitions', 'Feedback', 'Activities', 'digitalPresence']; // Array of tab names
+  // const id = ['1','2','3','4']
 
-   const [swiperReady, setSwiperReady] = useState(false);
+  //  const [swiperReady, setSwiperReady] = useState(false);
 
-  useEffect(() => {
+  // useEffect(() => {
 
    
-    const interval = setInterval(() => {
-      // Find the index of the currently selected tab
-      const currentIndex = tabs.indexOf(selectedTab);
-      // Calculate the next index
-      const nextIndex = (currentIndex + 1) % tabs.length;
+  //   const interval = setInterval(() => {
+  //     // Find the index of the currently selected tab
+  //     const currentIndex = tabs.indexOf(selectedTab);
+  //     // Calculate the next index
+  //     const nextIndex = (currentIndex + 1) % tabs.length;
 
       
-      // Update the selected tab
-      setSelectedTab(tabs[nextIndex]);
-      console.log(selectedTab);
-    }, 2700); // Change tab every 3000 milliseconds (3 seconds)
+  //     // Update the selected tab
+  //     setSelectedTab(tabs[nextIndex]);
+  //     console.log(selectedTab);
+  //   }, 2700); // Change tab every 3000 milliseconds (3 seconds)
 
-    return () => {clearInterval(interval); 
+  //   return () => {clearInterval(interval); 
     
       
       
-     }// Cleanup function to clear interval on unmount
+  //    }// Cleanup function to clear interval on unmount
     
-  }, [selectedTab, tabs]);
+  // }, [selectedTab, tabs]);
 
 
-  const handleTabSelect = (tabName) => {
-    setSelectedTab(tabName);
+  // const handleTabSelect = (tabName) => {
+  //   setSelectedTab(tabName);
    
   
-  };
+  // };
 
 
 
@@ -485,6 +486,9 @@ function Main() {
 
       </div>
       </section> */}
+
+
+Hello boss
 </>
   );
 }

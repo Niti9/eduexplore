@@ -1,6 +1,6 @@
-import Main from '@/components/Main'
+// import Main from '@/components/Main'
 import MyTalent from '@/components/MyTalent'
-import Sprite from '@/components/Splide'
+// import Sprite from '@/components/Splide'
 import React from 'react'
 
 function page() {
