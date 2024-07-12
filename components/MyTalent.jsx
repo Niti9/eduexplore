@@ -24,26 +24,38 @@ import Navbar from "@/components/Navbar";
 
 
 function MyTalent() {
+
+  // making array of all the images so we can use them directly for mobile screen code
+  const images = [smBg1, smBg2, smBg3, smBg4];
+
     const [selectedTab, setSelectedTab] = useState('Competitions');
-    const tabs = ["Competitions", "Feedback", "Activities", "digitalPresence"]; // Array of tab names
+    const tabs = ["Competitions", "Feedback", "Activities", "digitalPresence",'']; // Array of tab names
   
     
-    useEffect(() => {
-      const interval = setInterval(() => {
-        // Find the index of the currently selected tab
-        const currentIndex = tabs.indexOf(selectedTab);
-        // Calculate the next index
-        const nextIndex = (currentIndex + 1) % tabs.length;
-        // Update the selected tab
-        setSelectedTab(tabs[nextIndex]);
-      }, 2700); // Change tab every 3000 milliseconds (3 seconds)
+    // useEffect(() => {
+    //   const interval = setInterval(() => {
+    //     // Find the index of the currently selected tab
+    //     const currentIndex = tabs.indexOf(selectedTab);
+    //     // Calculate the next index
+    //     const nextIndex = (currentIndex + 1) % tabs.length;
+    //     // Update the selected tab
+    //     setSelectedTab(tabs[nextIndex]);
+    //   }, 2700); // Change tab every 3000 milliseconds (3 seconds)
   
-      return () => clearInterval(interval); // Cleanup function to clear interval on unmount
-    }, [selectedTab, tabs]);
+    //   return () => clearInterval(interval); // Cleanup function to clear interval on unmount
+    // }, [selectedTab, tabs]);
   
     const handleTabSelect = (tabName) => {
       setSelectedTab(tabName);
     };
+
+    const handleSlideChange = (swiper) => {
+      const currentTab = tabs[swiper.activeIndex];
+      setSelectedTab(currentTab);
+      console.log(selectedTab)
+      console.log("current tab:",currentTab)
+    };
+  
   
     return (
       <>
@@ -54,221 +66,57 @@ function MyTalent() {
 
       {/* for Mobile Screen image section */}
       
-<section 
-     
-
-     className="w-[90%] m-auto
-   text-center max-w-[1128px]  sm:hidden block
-
-"
-
-   >
-  <div className="">
-
-  <div className="mb-7 mt-20">
-         <h1
-           className="font-semibold text-[28px] leading-[38px] md:text-[32px] lg:text-[40px]
-       "
-         >
-           How does My Talent help  
-           <span className=" text-[#4b17d5] md:text-[32px] lg:text-[40px]">  empower </span>
-           your school?
-         </h1>
-       </div>
-
- 
-   <Swiper
-     spaceBetween={10 }
-
-    // initialSlide={2}
+      <section className="w-[90%] m-auto text-center max-w-[1128px] sm:hidden block">
+          <div className="mb-7 mt-20">
+            <h1 className="font-semibold text-[28px] leading-[38px] md:text-[32px] lg:text-[40px]">
+              How does My Talent help  
+              <span className="text-[#4b17d5] md:text-[32px] lg:text-[40px]"> empower </span>
+              your school?
+            </h1>
+          </div>
     
-    slidesPerView={2}
+          <Swiper
+            spaceBetween={10}
+            slidesPerView={2}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
+            onSlideChange={handleSlideChange}
+            modules={[Autoplay, Pagination, Navigation]}
+          >
+            <div className="grid grid-cols-[1fr_1fr_1fr_1fr] overflow-x-scroll w-full">
+              {tabs.map((tab, index) => (
+                <SwiperSlide key={tab}>
+                  <div className={`!w-[180px] h-[100px] flex items-center justify-center relative cursor-pointer text-lg rounded-t-lg ${
+                    selectedTab === tab ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium" : "text-[#475467]"
+                  }`} onClick={() => handleTabSelect(tab)}>
+                    <div className="h-20 w-[80%] m-auto py-[15px] flex items-center flex-col justify-center text-center">
+                      {tab}
+                    </div>
+                    <img className={`absolute bottom-0 right-18 ${selectedTab === tab ? "flex" : "hidden"}`} src="/blue-cone.svg" alt="blue-cone" />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </div>
+          </Swiper>
     
-     autoplay={{
-       delay: 3000,
-      //  delay: 2000,
-       disableOnInteraction: false,
-     }}
-     
-     modules={[Autoplay, Pagination, Navigation]}
-    className="  "
-    // onSlideChange={handleSlideChange}
-   >
-     <div  className="grid grid-cols-[1fr_1fr_1fr_1fr]
-       overflow-x-scroll overflow-y-hidden md:overflow-x-hidden w-full   ">
-
-   
-     <SwiperSlide> <div className={`!w-[180px] h-[100px] 
-             
-             flex items-center justify-center relative cursor-pointer text-lg 
-             
-       rounded-t-lg  ${
-      selectedTab === "Competitions"
-           ? "bg-[#C1D3FF] text-[#101828]  text-xl md:font-medium "
-           : "text-[#475467]   "
-       }
-         `}
-         onClick={() => handleTabSelect("Competitions")}
-         ><div
-         className="h-20 w-[80%] m-auto  
-              py-[15px] px-0 flex items-center
- flex-col justify-center  text-center"
-       >
-         Competitions
-
-      
-       </div>
-       <img
-         className={`absolute bottom-0 right-18  ${
-           selectedTab === "Competitions" ? "flex" : "hidden"
-         }`}
-         src="/blue-cone.svg"
-         alt="blue-cone"
-       />
-       </div>
-       </SwiperSlide>
-     <SwiperSlide>
-       <div
-      className={`w-[180px] h-[100px]  flex items-center justify-center relative cursor-pointer
-       rounded-t-lg text-lg   ${
-     
-         selectedTab === "Feedback"
-           ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium"
-           : "text-[#475467] "
-       }`}
-         onClick={() => handleTabSelect("Feedback")}
-
-     > <div className="h-20 w-[83%] m-auto 
-              py-[15px] px-0 flex items-center
- flex-col justify-center  text-center">Feedback</div>
-         <img
-           className={`absolute bottom-0 right-18  ${
-             selectedTab === "Feedback" ? "flex" : "hidden"
-           }`}
-           src="/blue-cone.svg"
-           alt="blue-cone"
-         /></div>
-         </SwiperSlide>
-     <SwiperSlide>
-       <div
-     className={`w-[180px] h-[100px]  flex items-center justify-center 
-       rounded-t-lg relative cursor-pointer text-lg  ${
-         selectedTab === "Activities"
-           ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium"
-           : "text-[#475467]"
-       }`}
-       onClick={() => handleTabSelect("Activities")}
-     ><div className="h-20 w-[83%] m-auto 
-              py-[15px] px-0 flex items-center
- flex-col justify-center  text-center">Guided Activities</div>
-         <img
-           className={`absolute bottom-0 right-18  ${
-             selectedTab === "Activities" ? "flex" : "hidden"
-           }`}
-           src="/blue-cone.svg"
-           alt="blue-cone"
-         />
-         </div>
-       </SwiperSlide>
-     <SwiperSlide >
-       <div
-     
-      className={`w-[180px] h-[100px]  flex items-center justify-center
-       rounded-t-lg relative cursor-pointer text-lg right-[1px]
-         ${
-           selectedTab === "digitalPresence"
-             ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium !ml-[-180px]"
-             : "text-[#475467]"
-         }
-       `}
-       onClick={() => handleTabSelect("digitalPresence")}
-     >
-       <div className="h-20 w-[83%] m-auto 
-              py-[15px] px-0 flex items-center
- flex-col justify-center  text-center">Digital Presence</div>
-         <img
-           className={`absolute bottom-0 right-18  ${
-             selectedTab === "digitalPresence" ? "flex" : "hidden"
-           }`}
-           src="/blue-cone.svg"
-           alt="blue-cone"
-         />
-       </div>
-     </SwiperSlide>
-     
-
-
-            
-     </div>
-   </Swiper>
-  
-
-
-
-  {/* another below images */}
-  <div className={` max-w-[1128px]  
-        bg-[#e3ebfe]`}>
-         <div
-           className={` ${  selectedTab === "Competitions" ? "flex" : "hidden"}`}
-         >
-           <Image
-            src={smBg1} 
-           className="w-full h-full"
-           alt="image1" 
-           priority
-           width={500}
-           height={500}
-
-           />
-         </div>
-
-         <div
-           className={` ${ selectedTab === "Feedback" ? "flex" : "hidden"}`}
-         >
-           <Image src={smBg2}
-            className="w-full h-full"
-           alt="image2" priority
-           width={96}
-           height={96}/>
-         </div>
-
-         <div
-           className={` ${  selectedTab === "Activities" ? "flex" : "hidden"}`}
-         >
-           <Image
-            className="w-full h-full"
-            src={smBg3}
-            alt="image3" priority
-           width={96}
-           height={96}/>
-         </div>
-
-         <div
-           className={` ${  selectedTab === "digitalPresence" ? "flex" : "hidden"}
-     `}
-         >
-           <Image 
-            className="w-full h-full" 
-           src={smBg4} alt="image4"
-            priority
-           width={96}
-           height={96}/>
-         </div>
-       </div>
-
-
-
-
-
-   </div>
-   </section>
+          {/* Background images */}
+          <div className="max-w-[1128px] bg-[#e3ebfe]">
+            {tabs.map((tab, index) => (
+              <div key={tab} className={`${selectedTab === tab ? "flex" : "hidden"}`}>
+                <Image src={images[index] || "/smBg1.svg"} className="w-full h-full" alt={`image${index + 1}`} priority width={500} height={500} />
+              </div>
+            ))}
+          </div>
+        </section>
 
       
 
       {/* for tablet and desktop screens */}
    
 
-<section
+      <section
   className="w-[80%] m-auto text-center max-w-[1128px] flex-grow sm:block hidden"
 >
         <div className="min-h-[500px]">

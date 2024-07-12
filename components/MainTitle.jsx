@@ -10,7 +10,7 @@ function MainTitle() {
       >
         <div className="grid grid-cols-1 sm:grid-cols-[2.5fr_2fr] ">
           <div
-            className="w-[90%] md:w-[90%] lg:w-[70%] m-auto min-h-[270px]
+            className="w-[90%] md:w-[85%] lg:w-[70%] m-auto min-h-[270px]
           items-center flex "
           >
             <div>
@@ -63,8 +63,8 @@ function MainTitle() {
               </div>
             </div>
           </div>
-          <div>
-  <img  className=" mt-8 sm:mt-0 w-full h-full 
+          <div className='mx-6 sm:mx-0'>
+  <img  className="  mt-8 sm:mt-0 w-[full] h-full 
   "
    src="/childXl.png" alt="child image"/>
   </div>
