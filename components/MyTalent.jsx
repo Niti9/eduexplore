@@ -29,24 +29,29 @@ function MyTalent() {
   const images = [smBg1, smBg2, smBg3, smBg4];
 
     const [selectedTab, setSelectedTab] = useState('Competitions');
+    const [selectedlargeTab, setSelectedlargeTab] = useState('Competitions');
     const tabs = ["Competitions", "Feedback", "Activities", "digitalPresence",'']; // Array of tab names
+    const largetabs = ["Competitions", "Feedback", "Activities", "digitalPresence"]; // Array of tab names
   
     
-    // useEffect(() => {
-    //   const interval = setInterval(() => {
-    //     // Find the index of the currently selected tab
-    //     const currentIndex = tabs.indexOf(selectedTab);
-    //     // Calculate the next index
-    //     const nextIndex = (currentIndex + 1) % tabs.length;
-    //     // Update the selected tab
-    //     setSelectedTab(tabs[nextIndex]);
-    //   }, 2700); // Change tab every 3000 milliseconds (3 seconds)
+    useEffect(() => {
+      const interval = setInterval(() => {
+        // Find the index of the currently selected tab
+        const currentIndex = largetabs.indexOf(selectedlargeTab);
+        // Calculate the next index
+        const nextIndex = (currentIndex + 1) % largetabs.length;
+        // Update the selected tab
+        setSelectedlargeTab(largetabs[nextIndex]);
+      }, 3000); // Change tab every 3000 milliseconds (3 seconds)
   
-    //   return () => clearInterval(interval); // Cleanup function to clear interval on unmount
-    // }, [selectedTab, tabs]);
+      return () => clearInterval(interval); // Cleanup function to clear interval on unmount
+    }, [selectedlargeTab, largetabs]);
   
     const handleTabSelect = (tabName) => {
       setSelectedTab(tabName);
+    };
+    const handlelargeTabSelect = (tabName) => {
+      setSelectedlargeTab(tabName);
     };
 
     const handleSlideChange = (swiper) => {
@@ -79,7 +84,7 @@ function MyTalent() {
             spaceBetween={10}
             slidesPerView={2}
             autoplay={{
-              delay: 3000,
+              delay: 4000,
               disableOnInteraction: false,
             }}
             onSlideChange={handleSlideChange}
@@ -144,13 +149,13 @@ function MyTalent() {
                 md:h-[124px] md:py-[10px] md:px-0 md:w-full
                 flex items-center justify-center relative cursor-pointer text-lg
           rounded-t-lg  ${
-            selectedTab === "Competitions"
+            selectedlargeTab === "Competitions"
               ? "bg-[#C1D3FF] text-[#101828]  text-xl md:font-medium "
               : "text-[#475467]  "
           }
             `}
-              onClick={() => handleTabSelect("Competitions")}
-              id="1"
+              onClick={() => handlelargeTabSelect("Competitions")}
+             
             >
               <div
                 className="h-10 w-[83%] m-auto 
@@ -161,7 +166,7 @@ function MyTalent() {
               </div>
               <img
                 className={`absolute bottom-0 right-18  ${
-                  selectedTab === "Competitions" ? "flex" : "hidden"
+                  selectedlargeTab === "Competitions" ? "flex" : "hidden"
                 }`}
                 src="/blue-cone.svg"
                 alt="blue-cone"
@@ -171,18 +176,18 @@ function MyTalent() {
               className={`w-[180px] h-[100px]  flex items-center justify-center relative cursor-pointer
           rounded-t-lg text-lg  md:h-[124px] md:py-[10px] md:px-0
           md:w-full ${
-            selectedTab === "Feedback"
+            selectedlargeTab === "Feedback"
               ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium"
               : "text-[#475467]"
           }`}
-              onClick={() => handleTabSelect("Feedback")}
+              onClick={() => handlelargeTabSelect("Feedback")}
             >
               <div className="h-10 w-[83%] m-auto 
                    py-[15px] px-0 flex items-center
       flex-col justify-center  text-center">Feedback</div>
               <img
                 className={`absolute bottom-0 right-18  ${
-                  selectedTab === "Feedback" ? "flex" : "hidden"
+                  selectedlargeTab === "Feedback" ? "flex" : "hidden"
                 }`}
                 src="/blue-cone.svg"
                 alt="blue-cone"
@@ -192,11 +197,11 @@ function MyTalent() {
               className={`w-[180px] h-[100px]  flex items-center justify-center 
             rounded-t-lg relative cursor-pointer text-lg  md:h-[124px] 
             md:py-[10px] md:px-0 md:w-full ${
-              selectedTab === "Activities"
+              selectedlargeTab === "Activities"
                 ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium"
                 : "text-[#475467]"
             }`}
-              onClick={() => handleTabSelect("Activities")}
+              onClick={() => handlelargeTabSelect("Activities")}
             >
               <div className="text-center
               h-10 w-[83%] m-auto 
@@ -204,7 +209,7 @@ function MyTalent() {
       flex-col justify-center  ">Guided Activities</div>
               <img
                 className={`absolute bottom-0 right-18  ${
-                  selectedTab === "Activities" ? "flex" : "hidden"
+                  selectedlargeTab === "Activities" ? "flex" : "hidden"
                 }`}
                 src="/blue-cone.svg"
                 alt="blue-cone"
@@ -214,12 +219,12 @@ function MyTalent() {
               className={`w-[180px] h-[100px]  flex items-center justify-center
             rounded-t-lg relative cursor-pointer text-lg right-[1px] sm:right-0 
               md:h-[124px] md:py-[10px] md:px-0 md:w-full ${
-              selectedTab === "digitalPresence"
+              selectedlargeTab === "digitalPresence"
                 ? "bg-[#C1D3FF] text-[#101828] text-xl md:font-medium"
                 : "text-[#475467]"
             }
             `}
-              onClick={() => handleTabSelect("digitalPresence")}
+              onClick={() => handlelargeTabSelect("digitalPresence")}
               id="4"
             >
               <div className="h-10 w-[83%] m-auto 
@@ -227,7 +232,7 @@ function MyTalent() {
       flex-col justify-center  text-center">Digital Presence</div>
               <img
                 className={`absolute bottom-0 right-18  ${
-                  selectedTab === "digitalPresence" ? "flex" : "hidden"
+                  selectedlargeTab === "digitalPresence" ? "flex" : "hidden"
                 }`}
                 src="/blue-cone.svg"
                 alt="blue-cone"
@@ -241,7 +246,7 @@ function MyTalent() {
           <div className={` max-w-[1128px]  bg-[#e3ebfe]
           `}>
             <div
-              className={` ${selectedTab === "Competitions" ? "flex" : "hidden"}`}
+              className={` ${selectedlargeTab === "Competitions" ? "flex" : "hidden"}`}
             >
               <Image
                src={newBg1} 
@@ -255,7 +260,7 @@ function MyTalent() {
             </div>
 
             <div
-              className={` ${selectedTab === "Feedback" ? "flex" : "hidden"}`}
+              className={` ${selectedlargeTab === "Feedback" ? "flex" : "hidden"}`}
             >
               <Image src={newBg2}
                className="w-full h-full"
@@ -265,7 +270,7 @@ function MyTalent() {
             </div>
 
             <div
-              className={` ${selectedTab === "Activities" ? "flex" : "hidden"}`}
+              className={` ${selectedlargeTab === "Activities" ? "flex" : "hidden"}`}
             >
               <Image
                className="w-full h-full"
@@ -276,7 +281,7 @@ function MyTalent() {
             </div>
 
             <div
-              className={` ${selectedTab === "digitalPresence" ? "flex" : "hidden"}
+              className={` ${selectedlargeTab === "digitalPresence" ? "flex" : "hidden"}
         `}
             >
               <Image 
