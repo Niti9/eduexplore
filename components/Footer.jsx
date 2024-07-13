@@ -39,9 +39,15 @@ function Footer() {
           <div>
           <p className="text-[#98a2b3] text-[1em]">COMPANY</p>
           <ul className="list-none font-medium">
+            <Link href="/about-us">
             <li className="mt-4">About us </li>
+            </Link>
+            <Link href="/request-demo">
             <li className="mt-4">Contact us </li>
+            </Link>
+            <Link href="/partner-with-us">
             <li className="mt-4">Partner with us </li>
+            </Link>
           </ul>
 
           </div>

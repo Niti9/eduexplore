@@ -4,8 +4,6 @@ import DemoText from "@/components/DemoText";
 import DemoFormSide from "@/components/DemoFormSide";
 import NeedHelp from "@/components/NeedHelp";
 import Footer from "@/components/Footer";
-import Main from '@/components/Main';
-import CheckingCorousel from "@/components/CheckingCorousel";
 
 
 

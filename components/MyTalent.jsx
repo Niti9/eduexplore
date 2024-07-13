@@ -30,7 +30,7 @@ function MyTalent() {
 
     const [selectedTab, setSelectedTab] = useState('Competitions');
     const [selectedlargeTab, setSelectedlargeTab] = useState('Competitions');
-    const tabs = ["Competitions", "Feedback", "Activities", "digitalPresence",'']; // Array of tab names
+    const tabs = ["Competitions", "Feedback", "Guided Activities", "Digital Presence",'']; // Array of tab names
     const largetabs = ["Competitions", "Feedback", "Activities", "digitalPresence"]; // Array of tab names
   
     
