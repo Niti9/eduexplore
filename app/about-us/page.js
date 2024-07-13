@@ -23,13 +23,36 @@ function page() {
     text-[#475467] mt-6 font-medium
     mx-6 sm:mx-8 lg:mx-0 '>
      <p> My Talent is helping over 
+      <span className='relative'>
+
       <span className='text-[#4B17D5]'>
        {""} 5.2 million students
-        </span> across</p>
+        </span> 
+        <Image
+        className='absolute top-[14px] left-[-10px] w-full'
+        src="/greenLine.svg"
+        alt="greenline"
+        width={100}
+        height={100}
+        />
+      </span>
+      
+    {" "}  across</p>
      <p>
+      <span className='relative'>
+
       <span className='text-[#4B17D5]'>
      13000+ schools,
-      </span> learn better.</p>
+      </span> 
+      <Image
+        className='absolute top-[16px] left-0 w-full'
+        src="/greenLine.svg"
+        alt="greenline"
+        width={100}
+        height={100}
+        />
+      </span>
+       learn better.</p>
     </div>
     </div>
 
@@ -64,10 +87,22 @@ school platform.
 
 
     <div className='bg-[#F1ECFD] mx-4  md:mx-28 xl:mx-64 h-full py-20 
-     mt-20  rounded-2xl'>
+     mt-20  rounded-3xl'>
           <h1 className='text-[24px] sm:text-[40px]
            font-semibold text-center pb-4 sm:pb-0'>
-            Our Mission
+            <span className='relative'>
+
+            <span className=''>Our Mission </span>
+            
+            <Image
+            className='absolute top-[-70%] right-[-12%] w-[34px] sm:w-[50px]'
+            src="/textWithStars.svg"
+            alt="stars"
+            width={50}
+            height={100}
+            />
+            </span>
+            
           </h1>
           <p className='text-[#475467] text-[16px] sm:text-xl px-4 text-justify sm:px-16 sm:text-center'>
           "Our goal is to connect all K-12 students with the people and resources they need to reach their full potential. We do this by listening
