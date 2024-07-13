@@ -9,7 +9,7 @@ const outfit = Outfit({ subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Fostering Talent",
+  title: "Empowering Schools, Fostering Talent",
   description: "Get a demo of our product and  see how  we empower your school.",
   other:{
     // 'theme-color':'#0d1117',

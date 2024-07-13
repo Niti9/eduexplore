@@ -28,11 +28,13 @@ function Footer() {
             </Link>
           </div>
         </div>
-        <div className="flex  place-content-between  pt-8 md:pt-0">
+        <div className="flex  place-content-between  pt-8 md:pt-0 flex-row-reverse sm:flex-row mx-4 sm:mx-0">
           <div>
               <p className="text-[#98a2b3] text-[1em]">PRODUCTS</p>
               <ul className="list-none font-medium">
+                <Link href="/">
                 <li className="mt-4"> My Talent App</li>
+                </Link>
                 
                 </ul>
           </div>
