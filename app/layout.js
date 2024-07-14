@@ -9,8 +9,8 @@ const outfit = Outfit({ subsets: ["latin"],
 });
 
 export const metadata = {
-  title: "Empowering Schools, Fostering Talent",
-  description: "Get a demo of our product and  see how  we empower your school.",
+  title: "My Talent",
+  description: "My Talent is connecting schools across India and helping their students to find and showcase their unique talent.",
   other:{
     // 'theme-color':'#0d1117',
     'theme-color':'#f5f6f9',
