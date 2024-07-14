@@ -12,14 +12,8 @@ function Footer() {
           </div>
           </Link>
           <div className=" mt-8 ml-2 flex gap-4">
-            <Link href="">
-            <img
-              className="w-6 h-6 overflow-clip "
-              src="/facebook.svg"
-              alt="facebook"
-            />
-            </Link>
-            <Link href="">
+           
+            <Link href="https://www.linkedin.com/company/eduexplore/">
             <img
               className="w-6 h-6 overflow-clip "
               src="/linkedin.svg"
