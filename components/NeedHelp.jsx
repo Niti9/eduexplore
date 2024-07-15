@@ -63,7 +63,7 @@ function NeedHelp() {
             xl:-translate-y-4 overflow-clip overflow-contentf ">
           <img
           //  class="lg:w-3/5 w-full xl:w-full bg-green-400"
-           class=""
+           className=""
             src="/needHelp.svg"
             alt="needHelp"
           />

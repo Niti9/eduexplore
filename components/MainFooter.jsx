@@ -1,11 +1,14 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 function MainFooter() {
   return (
    <>
    <section className="relative h-[470px] mt-20 sm:mt-40 ">
   <div className="absolute top-0 left-0 w-full h-full">
-    <img className="w-full h-full object-cover" src="/FooterSection.svg" alt="footer"/>
+    <Image className="w-full h-full object-cover" src="/FooterSection.svg" alt="footer"
+    width={900}
+    height={100}/>
   </div>
   <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  w-[95%]">
     <div className="   text-center ">

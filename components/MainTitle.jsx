@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 function MainTitle() {
   return (
     <>
@@ -63,10 +64,13 @@ function MainTitle() {
               </div>
             </div>
           </div>
-          <div className='mx-6 sm:mx-0'>
-  <img  className="  mt-8 sm:mt-0 w-[full] h-full 
+          <div className='mx-3 sm:mx-0'>
+  <Image  className="  mt-8 sm:mt-0 w-[full] h-full 
   "
-   src="/childXl.png" alt="child image"/>
+   src="/childXl.png" alt="child image"
+   width={1200}
+   height={1200}
+   priority/>
   </div>
         </div>
       </section>

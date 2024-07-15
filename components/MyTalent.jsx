@@ -57,8 +57,8 @@ function MyTalent() {
     const handleSlideChange = (swiper) => {
       const currentTab = tabs[swiper.activeIndex];
       setSelectedTab(currentTab);
-      console.log(selectedTab)
-      console.log("current tab:",currentTab)
+      // console.log(selectedTab)
+      // console.log("current tab:",currentTab)
     };
   
   
@@ -99,7 +99,9 @@ function MyTalent() {
                     <div className="h-20 w-[80%] m-auto py-[15px] flex items-center flex-col justify-center text-center">
                       {tab}
                     </div>
-                    <img className={`absolute bottom-0 right-18 ${selectedTab === tab ? "flex" : "hidden"}`} src="/blue-cone.svg" alt="blue-cone" />
+                    <Image className={`absolute bottom-0 right-18 ${selectedTab === tab ? "flex" : "hidden"}`} src="/blue-cone.svg" alt="blue-cone"
+                     width={40}
+                     height={40}/>
                   </div>
                 </SwiperSlide>
               ))}

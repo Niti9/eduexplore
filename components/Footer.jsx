@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 function Footer() {
   return (
     <>
@@ -7,23 +8,18 @@ function Footer() {
         <div className="flex flex-col items-start  ">
           {/* <img src="/mainLogo.png" alt="main-logo" /> */}
           <Link href="/">
-          <div className="powerSmurf text-[#5a39d6] text-3xl  cursor-pointer  ">
+          <div className="powerSmurf text-[#5a39d6] text-3xl  cursor-pointer pl-3 sm:pl-0 ">
             My Talent
           </div>
           </Link>
-          <div className=" mt-8 ml-2 flex gap-4">
-            <Link href="">
-            <img
-              className="w-6 h-6 overflow-clip "
-              src="/facebook.svg"
-              alt="facebook"
-            />
-            </Link>
-            <Link href="">
-            <img
+          <div className=" mt-8 ml-2 flex gap-4 pl-2 sm:pl-0">
+            <Link href="https://www.linkedin.com/company/eduexplore/">
+            <Image
               className="w-6 h-6 overflow-clip "
               src="/linkedin.svg"
               alt="linkedin"
+              width={100}
+              height={100}
             />
             </Link>
           </div>
