@@ -12,9 +12,16 @@ function Footer() {
             My Talent
           </div>
           </Link>
+<<<<<<< HEAD
           <div className=" mt-8 ml-2 flex gap-4 pl-2 sm:pl-0">
             <Link href="https://www.linkedin.com/company/eduexplore/">
             <Image
+=======
+          <div className=" mt-8 ml-2 flex gap-4">
+           
+            <Link href="https://www.linkedin.com/company/eduexplore/">
+            <img
+>>>>>>> ce3f979603dc0413a5d7fecbcfeef8fe77871d43
               className="w-6 h-6 overflow-clip "
               src="/linkedin.svg"
               alt="linkedin"
