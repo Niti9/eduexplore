@@ -130,8 +130,8 @@ export async function handleFormSubmit(prev, formdata) {
       };
       await smtp.sendMail(mailConfig);
       console.log("email sent using smtp");
-      console.log(process.env.sendtoEmail);
-      console.log(process.env.fromEmail);
+      console.log("this is send to :",process.env.sendtoEmail);
+      console.log("this is from mail :",process.env.fromEmail);
       return {
         status:true,
         message: "Your query has been submitted. Our team will reach out to you soon.",
